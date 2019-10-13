@@ -1,0 +1,94 @@
+.board {
+    width: 100%;
+}
+
+.goal {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .goal {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .board {
+        width: 500px;
+        margin: auto;
+    }
+}
+
+.black-3c85d {
+  color: #F0D9B5;
+  -webkit-background: #B58863;
+  -moz-background: #B58863;;
+  background: radial-gradient(circle, #E6B893, #B58863 100%);
+}
+
+.white-1e1d7 {
+  color: #B58863;
+  -webkit-background: #F0D9B5;
+  -moz-background: #F0D9B5;;
+  background: radial-gradient(circle, #FEF8EE, #F0D9B5 100%);
+}
+
+.promotion-mask {
+  opacity : 0.6;
+}
+
+.promotion-background {
+  -webkit-background: inset 0 0 10px 3px #494D53 !important;
+  -moz-background: inset 0 0 10px 5px #494D53 !important;
+  background: radial-gradient(circle, #FFFFFF, #787878 100%) !important;
+}
+
+.promotion-background:hover {
+  -webkit-background: inset 0 0 10px 3px #14335C !important;
+  -moz-background: inset 0 0 10px 5px #14335C !important;
+  background: radial-gradient(circle, #FFFFFF, #0068F0 100%) !important;
+}
+
+.highlight1-32417 {
+  -webkit-background: inset 0 0 10px 3px #3E59F1;
+  -moz-background: inset 0 0 10px 3px #3E59F1;
+  box-shadow: inset 0 0 10px 3px #3E59F1;
+  background: radial-gradient(circle, #DFE4FF, #90A0FF 100%)
+}
+
+.highlight-candidate {
+  -webkit-background: inset 0 0 10px 3px #3E59F1;
+  -moz-background: inset 0 0 10px 3px #3E59F1;
+  box-shadow: inset 0 0 10px 3px #3E59F1;
+  background: radial-gradient(circle, #DFE4FF, #90A0FF 100%)
+}
+
+.highlight-white {
+  -webkit-background: inset 0 0 10px 3px #3E59F1;
+  -moz-background: inset 0 0 10px 3px #3E59F1;
+  background: radial-gradient(circle, #899BFF, #F0D9B5 100%)
+}
+
+.highlight-black {
+  -webkit-background: inset 0 0 10px 3px #3E59F1;
+  -moz-background: inset 0 0 10px 3px #3E59F1;
+  background: radial-gradient(circle, #899BFF, #B58863 100%)
+}
+
+.highlight2-9c5d2 {
+  -webkit-background: inset 0 0 10px 3px #3E59F1;
+  -moz-background: inset 0 0 10px 3px #3E59F1;
+  box-shadow: inset 0 0 10px 3px #3E59F1;
+  background: radial-gradient(circle, #DFE4FF, #90A0FF 100%);
+}
+
+.suggestion-white {
+  -webkit-background: inset 0 0 10px 3px #c6fdb4;
+  -moz-background: inset 0 0 10px 3px #c6fdb4;
+  background: radial-gradient(circle, #c6fdb4, #87f763 100%)
+}
+
+.suggestion-black {
+  -moz-background: inset 0 0 10px 3px #9af57d;
+  background: radial-gradient(circle, #9af57d, #47c71e 100%)
+}

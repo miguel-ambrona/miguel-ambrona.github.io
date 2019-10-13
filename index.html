@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Personal Webpage">
+  <meta name="author" content="Miguel Ambrona">
+
+  <title>Personal Webpage</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <script src="https://use.fontawesome.com/6d26681b38.js"></script>
+
+  <!-- Styles for chess -->
+  <link type="text/css" rel="stylesheet" href="vendor/chess/chessboard-1.0.0.min.css"/>
+  <link type="text/css" rel="stylesheet" href="css/board.css"/>
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Miguel Ambrona</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-5" src="img/profile.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#theses">Theses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#tools">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse mb-3">
+      <div class="container" style="margin-bottom:10px">
+        <span style="margin:3px">
+          <a class="a-icon" href="http://dblp.uni-trier.de/pers/hd/a/Ambrona:Miguel">
+            <img class="nav-img my-icon" src="img/icons/dblp.png" onmouseover="rotation(this, 0, -1)">
+          </a>
+        </span>
+        <span style="margin:3px">
+          <a class="a-icon" href="https://github.com/miguel-ambrona">
+            <img class="nav-img my-icon" src="img/icons/github.png" onmouseover="rotation(this, 0, -1)">
+          </a>
+        </span>
+        <span style="margin:3px">
+          <a class="a-icon" href="http://es.lichess.org/@/ambrona">
+            <img class="nav-img my-icon" src="img/icons/lichess.png" onmouseover="rotation(this, 0, -1)">
+          </a>
+        </span>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h2 class="mb-5">Miguel Ambrona</h2>
+        <p class="lead mb-3">
+          I am a post-doctoral researcher in the area of Cryptography
+          at <a href="https://www.ntt.co.jp/sc/index_e.html">NTT Secure Platform Laboratories</a> (Tokyo),
+          under the supervision of <a href="http://www005.upp.so-net.ne.jp/nanacov/">Masayuki Abe</a>.
+        </p>
+        <p class="lead mb-3">
+          Before joining NTT, I was a PhD student in Software, Systems and Computing at the
+          <a href="https://software.imdea.org/">IMDEA Software Institute</a> and
+          <a href="http://www.fi.upm.es">Universidad Politécnica de Madrid</a>, under the supervision of
+          <a href="https://gbarthe.github.io/">Gilles Barthe</a> and
+          <a href="https://beschmi.net/">Benedikt Schmidt</a>.
+          After that, and prior to joining NTT, I stayed at
+          <a href="https://software.imdea.org/">IMDEA</a> as a post-doctoral researcher, supervised by
+          <a href="http://www.dariofiore.it/">Dario Fiore</a> and
+          <a href="https://es.linkedin.com/in/claudiosoriente">Claudio Soriente</a>.
+        </p>
+        <p class="lead mb-5">
+          Previously, I studied Mathematical Engineering at <a href="https://www.ucm.es/">Universidad Complutense de Madrid</a>.
+        </p>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>Research Interests</h3>
+            <div class="columns-3 my-paragraph">
+              <ul>
+                <li>Computer-aided cryptography</li>
+                <li>Functional Programming</li>
+                <li>Generic Group Model</li>
+                <li>Attribute-Based Encryption</li>
+                <li>Functional Encryption</li>
+                <li>Simulation-based security</li>
+                <li>Zero-Knowledge Proofs</li>
+                <li>Isogeny-based cryptography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>Contact</h3>
+
+            <div class="subheading mb-5 columns">
+              NTT Laboratories<br>
+              3-9-11 Midori-cho, Musashino-shi<br>
+              Tokyo, 180-8585 (JAPAN)<br><br>
+              <span><i class="fa fa-phone"></i><span style="margin-left: 10px">+81-0422-59-3772</span></span><br>
+              <span><i class="fa fa-envelope"></i><span style="margin-left: 10px">name.surname.fu@hco.ntt.co.jp</span></span><br>
+            </div>
+            <div class="subheading mb-5">
+              PGP Public Key:
+              <a href="https://keys.mailvelope.com/pks/lookup?op=get&search=0xCD5E64EFD64514CF">
+                keys.mailvelope.com/pks/lookup?op=get&search=0xCD5E64EFD64514CF
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">PhD in Software, Systems and Computing</h3>
+            <div class="subheading mb-3">Universidad Politécnica de Madrid and IMDEA Software Institute</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Sep 2014 - Oct 2018</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">MS in Mathematical Engineering</h3>
+            <div class="subheading mb-3">Universidad Complutense de Madrid</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2013-2014</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">BS in Mathematical Engineering</h3>
+            <div class="subheading mb-3">Universidad Complutense de Madrid</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2009-2013</span>
+          </div>
+        </div>
+
+        <br><br><br>
+        <h3 class="mb-5">Internships</h3>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">NTT Secure Platform Laboratories (Tokyo)</h3>
+            <div class="mb-3 my-subtitle">Under the supervision of Masayuki Abe</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 2017 - Sep 2017</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Fábrica Nacional de Moneda y Timbre - RCM (Madrid)</h3>
+            <div class="mb-3 my-subtitle">Under the supervision of Luis Borruel</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2012-2013</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="theses">
+      <div class="w-100">
+        <h2 class="mb-5">Theses</h2>
+
+        <h3 class="mb-3" id="phdthesis">PhD Thesis</h3>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0" style="font-weight: normal">“Automated Analysis of Cryptographic Constructions”</h3>
+            <div class="subheading mb-1">Universidad Politécnica de Madrid, October 2018</div>
+            <p class="my-paragraph">
+              In this thesis we develop new techniques and tools to broaden the scope of computer-aided
+              cryptography, with special emphasis on pairing-based cryptography.
+              More concretely, our methods are oriented to automatically analyzing the security of
+              signature-like primitives and attribute-based encryption in the generic group model, achieving
+              stronger security requirements compared to previous work on automated analysis.
+              We also study indifferentiability of symmetric-key constructions (such as Feistel Networks or the Even-Mansour
+              cipher) and explore how to automatically synthetize indifferentiability attacks.
+            </p>
+            <p class="my-paragraph">
+              All our contributions share a common methodology: we leverage techniques
+              from formal methods, expressing cryptographic constructions and security definitions
+              in a symbolic language. We then provide computational soundness
+              theorems for such symbolic models that guarantee that the conclusions derived
+              symbolically can be lifted to the actual (non-symbolic) model.
+            </p>
+          </div>
+          <div class="text-md-right">
+            <a href="theses/thesis.pdf">PDF</a>
+          </div>
+        </div>
+
+        <h3 class="mb-3">Master's Thesis</h3>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0" style="font-weight: normal">“The Green Vehicle Routing Problem with Multiple Technologies and Partial Recharges”</h3>
+            <div class="subheading mb-3">Universidad Complutense de Madrid, July 2014</div>
+            <p class="my-paragraph">
+              We formulate and study a variant of the well-known vehicle routing
+              problem, one in which the fleet consists of electric vehicles with a limited
+              range, so they need to recharge their batteries in refueling stations.
+            </p>
+            <p class="my-paragraph">
+              We develop two integer linear programming models for exact resolution of the problem.
+              It is remarkable that, improving on previous works, our models do not duplicate the
+              graph nodes corresponding to refueling stations, which significantly decreases the number of
+              integer variables in the system. Consequently, our models can compute the exact solution
+              of problems where previous methods fail.
+
+              However, for larger problems, even our exact models fall short, because their exact
+              resolution requires excessive computing time.
+              Alternatively, we develop heuristic algorithms to find relatively good solutions,
+              though possibly not optimal, within short running times.
+              Furthermore, we adapt and implement three metaheuristic techniques
+              (simulated annealing, tabu search and variable neighbourhood search) and
+              applied them to several test cases.
+            </p>
+          </div>
+          <div class="text-md-right">
+            <a href="theses/mthesis.pdf">PDF</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justified-items-center" id="tools">
+      <div class="w-100">
+        <h2 class="mb-5">Tools</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-3">Generic Group Analyzer Unbounded</h3>
+            <div class="my-paragraph mb-3">
+              I am one of the main developers of the
+              <a href="http://generic-group-analyzer.github.io/gga-ub">Generic Group Analyzer Unbounded</a>,
+              a tool that automatically analyzes the security of cryptographic constructions in the generic group model.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-3">Generic Group Model Symbolic Solver</h3>
+            <div class="my-paragraph mb-3">
+              I am one of the main developers of the
+              <a href="https://github.com/miguel-ambrona/ggm-symbolic-solver">Generic Group Model Symbolic Solver</a>,
+              an extension of the previous tool that captures polynomial divisions in the exponent.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-3">Attribute-Based Encryption</h3>
+            <div class="my-paragraph mb-3">
+              I developed a <i>proof of concept</i>
+              <a href="https://github.com/miguel-ambrona/abe-relic">implementation</a>
+              of attribute-based encryption in the framework of <i>predicate encodings</i> and
+              <i>pair encodings</i>.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-3">Indifferentiability Analysis</h3>
+            <div class="my-paragraph mb-3">
+              I developed a <a href="https://github.com/miguel-ambrona/abe-relic">tool</a> to perform
+              computer-asisted analysis of cryptographic primitives in the framework of indifferentiability.
+              This tool corresponds to the implementation of the techniques developed in Chapter 6 of my
+              <a class="js-scroll-trigger" href="#phdthesis">PhD Thesis</a>
+              and it is still work in progress.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-items-center" id="publications">
+      <div class="w-100">
+        <h2 class="mb-5">Publications</h2>
+
+        <h4 class="mb-3">2019</h4>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Black-Box Language Extension of Non-Interactive Zero-Knowledge Arguments”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Masayuki Abe, Miguel Ambrona, Miyako Ohkubo. <b>Preprint</b>
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="https://eprint.iacr.org/2019/696">PDF</a>
+          </div>
+        </div>
+
+        <h4 class="mb-3">2018</h4>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Lower Bounds on Structure-Preserving Signatures for Bilateral Messages”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Masayuki Abe, Miguel Ambrona, Miyako Ohkubo and Mehdi Tibouchi. <b>SCN 2018</b>
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="https://eprint.iacr.org/2018/640">PDF</a>
+          </div>
+        </div>
+
+        <h4 class="mb-3">2017</h4>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Attribute-Based Encryption in the Generic Group Model: Automated Proofs and New Constructions”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Miguel Ambrona, Gilles Barthe, Romain Gay and Hoeteck Wee. <b>ACM CCS 2017</b>
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="https://eprint.iacr.org/2017/983">PDF</a><br>
+            <a href="https://github.com/miguel-ambrona/ggm-symbolic-solver">TOOL</a>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Generic Transformations of Predicate Encodings: Constructions and Applications”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Miguel Ambrona, Gilles Barthe, Benedikt Schmidt. <b>Crypto 2017</b>
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="https://eprint.iacr.org/2016/1105">PDF</a><br>
+            <a href="https://github.com/miguel-ambrona/abe-relic">CODE</a>
+          </div>
+        </div>
+
+        <h4 class="mb-3">2016</h4>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Automated Unbounded Analysis of Cryptographic Constructions in the Generic Group Model”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Miguel Ambrona, Gilles Barthe, Benedikt Schmidt. <b>Eurocrypt 2016</b>
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="https://eprint.iacr.org/2016/270">PDF</a><br>
+            <a class="source-link" href="https://github.com/generic-group-analyzer/gga-unbounded">TOOL</a>
+          </div>
+        </div>
+
+        <h4 class="mb-3">2013</h4>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content" style="margin-left:20px">
+            <h3 class="mb-0" style="font-weight: normal; font-size:30px">
+              “Secure color. Advanced color techniques for analysis and security”
+            </h3>
+            <div class="my-paragraph" style="margin-left:10px">
+              Luis Borruel, Miguel Ambrona. Fábrica Nacional de Moneda y Timbre.
+            </div>
+          </div>
+          <div class="text-md-right" style="margin-left:10px">
+            <a href="docs/ODS_2014.pdf">PDF</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5">Interests</h2>
+        <p class="mb-5">
+          I love chess, here are some of my favourite chess compositions (the board is interactive):
+        </p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-xl-7">
+              <div id="myBoard" class="board"></div>
+              <h3 id="puzzlegoal" class="goal"></h3>
+            </div>
+            <div class="col-sm-12 col-xl-5">
+              <div class="btn-group-vertical puzzle-btns" role="group" aria-label="First group">
+                <button id="pz0" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(0)">
+                  Paul Heüacker, <i>Neue Freie Presse</i> (1920)
+                </button>
+                <button id="pz1" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(1)">
+                  Leonid Kubbel, <i>Shakhmatny Listok</i> (1922)
+                </button>
+                <button id="pz2" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(2)">
+                  J. Gunts, <i>Das Illustrierte Blatt</i> (1922)
+                </button>
+                <button id="pz3" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(3)">
+                  A. & K. Sarychev Brothers (1928)
+                </button>
+                <button id="pz4" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(4)">
+                  Mark Liburkin, <i>Shakhmaty V SSSR</i> (1939)
+                </button>
+                <button id="pz5" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(5)">
+                   Fritz Emil Giegold, <i>Schach-Echo</i> (1958)
+                </button>
+                <button id="pz6" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(6)">
+                  Yochanan Afek, <i>Tidskrift för Schack</i> (1972)
+                </button>
+                <button id="pz7" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(7)">
+                   Miguel Ambrona, <i>Revista Peón de Rey</i> (2015)
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+  <!-- Chess scripts -->
+  <script type="text/javascript" src="vendor/chess/chessboard-1.0.0.js"></script>
+  <script type="text/javascript" src="vendor/chess/chess.js"></script>
+
+  <!-- My scripts JavaScript -->
+  <script src="js/scripts.js"></script>
+  <script src="js/board.js"></script>
+
+</body>
+
+</html>
