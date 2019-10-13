@@ -262,4 +262,8 @@ function engineInteraction(previous_fen, last_move) {
 
 
 buildBoard(true, '8/8/8/8/8/8/8/8 w - - 0 1');
-loadNewFen();
+try {
+    loadNewFen();
+} catch {
+    // Do nothing
+}

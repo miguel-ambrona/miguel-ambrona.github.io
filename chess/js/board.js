@@ -321,7 +321,6 @@ function filterByTree(puzzles) {
 };
 
 getPuzzles();
-var all_puzzles_array = Array.from({length: state.all_puzzles.length}, (x,i) => i);
 
 function loadNewFen(){
     var puzzle;
@@ -332,7 +331,7 @@ function loadNewFen(){
 
         if (state.bombs_active)      { state.puzzles = state.bombs; }
         else if (state.errors_active){ state.puzzles = state.errors; }
-        else                         { state.puzzles = all_puzzles_array; }
+        else                         { state.puzzles = Array.from({length: state.all_puzzles.length}, (x,i) => i);; }
 
         if (state.random_active){ fen_id = getRandomInt(0, state.puzzles.length-1); }
 

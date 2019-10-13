@@ -406,7 +406,7 @@ function newPassword() {
     state.passwordHash = sha256(pass);
     sessionStorage.setItem('passwordHash', state.passwordHash);
 
-    setTimeout(function(){ loadNewFen(); }, 500);
+    setTimeout(function(){ getPuzzles(); loadNewFen(); }, 500);
 }
 
 function showHideBestMove() {
