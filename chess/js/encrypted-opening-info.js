@@ -48,4 +48,10 @@ var opening_info = [
        fen: '1Dw9711MpUsuCkisvDjiGUcLYdcH5dMjVBgH7ZdUqPqXF/rb+V8cPB5leTXBNEpqN2kz8gGQOEDHHhArTfFQVnJ4DfI2VTkm+9zmMK8hwSE=',
        mainline: 'IE0x7GU6vIIUXCM0fn6ShkpGWe2iFIDO5zFkYHVJCSV8p5EfQcudcireVHFxK+5RQ8VektEZ9yVEOlL3NAYaPQ==',
     },
+    {
+       name: '2PiNRc3eYD1KjBCKLx8dtQ==',
+       variant: 'rbFy69ZYxZ/brabZO0/arW615H4Pdz2fCtvW/7iIb5M=',
+       fen: 'VhrcZzGDEjX+cdyuZahKUORWtAgUM9Sy2NvHPcMR2mdb+XjeBVBWmvs/sp1f9I7U6e3or0yrUs9xrDNLpjkjPNJ536Y7ia2QTtLcWhNUYuk=',
+       mainline: 'm3OAcLH81myNAy4gchGy9j7b/+ErB1DkzNVduYPEKLs=',
+    },
 ];
