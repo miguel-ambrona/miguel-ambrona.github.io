@@ -147,7 +147,7 @@ book_msg   = ['Modo diseñado para el estudio de aperturas.',
               'En cada posición (aunque varias jugadas sean buenas) sólo hay una jugada válida, correspondiente a la variante prediseñada para el estudio.'];
 
 puzz_title = 'Modo táctica';
-puzz_msg   = ['Modo diseñado para el estudio de táctica.<br><br><b>Todavía en desarrollo.</b>'];
+puzz_msg   = ['Modo diseñado para el estudio de táctica y ataque. Por momento contiene planes de ataque de partidas famosas.'];
 
 
 endb_title = 'Modo finales';

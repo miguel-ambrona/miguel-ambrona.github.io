@@ -45,11 +45,17 @@ function loadOpeningMode() {
 }
 
 function loadPuzzleMode() {
-    $('#book-btn').removeClass('btn-primary').addClass('btn-secondary');
-    $('#puzz-btn').removeClass('btn-secondary').addClass('btn-primary');
-    $('#endb-btn').removeClass('btn-primary').addClass('btn-secondary');
+    $('#book-btn').removeClass('btn-primary').addClass('btn-dark');
+    $('#puzz-btn').removeClass('btn-dark').addClass('btn-primary');
+    $('#endb-btn').removeClass('btn-primary').addClass('btn-dark');
     state.mode = 'puzzle';
     loadNewFen();
+
+    $('#shot-btn').prop('disabled', true);
+    $('#tags-btn').prop('disabled', true);
+    $('#bomb-btn').prop('disabled', true);
+    $('#tree-btn').prop('disabled', true);
+    $('#game-btn').prop('disabled', true);
 }
 
 function loadEndgameMode() {

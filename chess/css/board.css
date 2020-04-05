@@ -180,6 +180,18 @@
   background: radial-gradient(circle, #F4ECF7, #D2B4DE 100%)
 }
 
+.Bad-move-white {
+  -webkit-background: inset 0 0 10px 3px #FFF1F1;
+  -moz-background: inset 0 0 10px 3px #FFF1F1;
+  background: radial-gradient(circle, #FFF1F1, #FBAAAA 100%)
+}
+
+.Bad-move-black {
+  -webkit-background: inset 0 0 10px 3px #FBAAAA;
+  -moz-background: inset 0 0 10px 3px #FBAAAA;
+  background: radial-gradient(circle, #FBAAAA, #FA5656 100%)
+}
+
 .mybtn {
     padding: 0;
     font-size: 24px;
