@@ -1,5 +1,4 @@
-var tactic_games = [
-  'Vidmar vs Anonimo (1936)|8/8/2P1kpp1/1R2p3/1b3PP1/4B1K1/8/1r6 w - - 0 10 f4f5 g6f5 g4f5 e6d6 b5b4 b1b4 e3c5 d6c5 c6c7',
+    'Vidmar vs Anonimo (1936)|8/8/2P1kpp1/1R2p3/1b3PP1/4B1K1/8/1r6 w - - 0 10 f4f5 g6f5 g4f5 e6d6 b5b4 b1b4 e3c5 d6c5 c6c7',
     'Fischer vs Benko (US Championship, 1963)|r2q1rk1/ppp2pbp/2np1np1/4p3/3PPP2/2NBBQ1P/PPP3P1/R3K2R w KQ - 0 1 d4e5 d6e5 f4f5 g6f5 f3f5 c6d4 f5f2 f6e8 e1g1 e8d6 f2g3 g8h8 g3g4 c7c6 g4h5 d8e8 e3d4 e5d4 f1f6 h8g8 e4e5 h7h6 c3e2 g7f6 h5h6',
     'Velimirovic vs Ljubojevic (Jugoslavija, 1972)|r3k2r/1bqnbppp/p2ppn2/1p4B1/3NPP2/2NB1Q2/PPP3PP/2KRR3 w kq - 0 12 c3d5 f6d5 e4d5 e7g5 e1e6 f7e6 d4e6 c7a5 f3h5 g7g6 h5g5 h8g8 d1d2 d7f8 e6f8 a5d8 f8h7 d8g5 f4g5 e8f7 h7f6 g8h8 g2g3 b7c8 h2h4 c8f5 d3f5 g6f5 h4h5 a8a7 d2f2',
     'Kasparov vs Portisch (Montenegro, 1983)|2r2rk1/pbq1bppp/1p6/n2p4/2P5/3B1N2/PB2QPPP/3R1RK1 w - - 0 1 c4d5 b7d5 d3h7 g8h7 d1d5 h7g8 b2g7 g8g7 f3e5 f8d8 e2g4 g7f8 g4f5 f7f6 e5d7 d8d7 d5d7 c7c5 f5h7 c8c7 h7h8 f8f7 d7d3 a5c4 f1d1 c4e5 h8h7 f7e6 h7g8 e6f5 g2g4 f5f4 d3d4 f4f3 g8b3 c5c3 b3d5 f3e2 d5e4',
@@ -20,5 +19,6 @@ var tactic_games = [
     'Vorcenovsky vs Sandler (URSS, 1982)|8/2k5/8/8/R4b2/4p1p1/5rP1/4B1K1 b - - 0 1 e3e2 e1f2 f4e3 undo undo a4f4 f2f4',
     'Vorcenovsky vs Sandler (URSS, 1982)|8/2k5/8/8/R4b2/6p1/4pBP1/6K1 b - - 0 2 f4e3 a4a1 g3f2',
     'Vorcenovsky vs Sandler (URSS, 1982)|8/2k5/8/8/5R2/6p1/4prP1/4B1K1 b - - 0 2 f2f4 e1g3 e2e1q',
-    'Vaganian vs Topalov (Olimpiada de Estambul, 2000)|1r4k1/8/b2pRqp1/p1pP1p2/P1P2P2/2p2Q2/5PB1/6K1 b - - 0 4 f6e6 d5e6 c3c2 f3e3 b8b1 g1h2 c2c1q e3g3 g8g7 g3h4 c1g1'
+    'Vaganian vs Topalov (Olimpiada de Estambul, 2000)|1r4k1/8/b2pRqp1/p1pP1p2/P1P2P2/2p2Q2/5PB1/6K1 b - - 0 4 f6e6 d5e6 c3c2 f3e3 b8b1 g1h2 c2c1q e3g3 g8g7 g3h4 c1g1',
+var tactic_games = [
 ];

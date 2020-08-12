@@ -49,9 +49,9 @@ var opening_info = [
        mainline: 'IE0x7GU6vIIUXCM0fn6ShkpGWe2iFIDO5zFkYHVJCSV8p5EfQcudcireVHFxK+5RQ8VektEZ9yVEOlL3NAYaPQ==',
     },
     {
-       name: '2PiNRc3eYD1KjBCKLx8dtQ==',
-       variant: 'rbFy69ZYxZ/brabZO0/arW615H4Pdz2fCtvW/7iIb5M=',
-       fen: 'VhrcZzGDEjX+cdyuZahKUORWtAgUM9Sy2NvHPcMR2mdb+XjeBVBWmvs/sp1f9I7U6e3or0yrUs9xrDNLpjkjPNJ536Y7ia2QTtLcWhNUYuk=',
-       mainline: 'm3OAcLH81myNAy4gchGy9j7b/+ErB1DkzNVduYPEKLs=',
+       name: 'Fux8QW0yCcOSNlp7mwPNTA==',
+       variant: 'dxt2tCmOkdsQqJu4qXdofxaa9dFka9HDZN9YMR/dzX8=',
+       fen: 'C3QcyOl+TUKg0+ZBhZxAp3LFXYzDKVVdaQIx735eXoaKgx9jQmORNhd5zbfi+rLYPShPAX804UsysYoYiL2caw==',
+       mainline: 'FZnt3FUIFLMyWMaEZUOa5ts0ZB4Mn+6CtvC/Bbvv9+Mdd7/+hpS5QVKN5dMav74J',
     },
 ];
