@@ -325,7 +325,7 @@ var puzzles = [
 
     { fen: '8/8/8/1P3r2/BpPk4/1p1b4/P5PP/R3K3 b Q c3 0 2',
       solution: 'd4e3 a1d1 f5f1 undo undo e1c1 undo undo - b4c3 solved',
-      goal : 'Can black checkmate in 2 moves?',
+      goal : 'It is Black to move. Can they checkmate in 2 moves?',
     }
 ];
 
