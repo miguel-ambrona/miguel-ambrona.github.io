@@ -54,4 +54,10 @@ var opening_info = [
        fen: 'C3QcyOl+TUKg0+ZBhZxAp3LFXYzDKVVdaQIx735eXoaKgx9jQmORNhd5zbfi+rLYPShPAX804UsysYoYiL2caw==',
        mainline: 'FZnt3FUIFLMyWMaEZUOa5ts0ZB4Mn+6CtvC/Bbvv9+Mdd7/+hpS5QVKN5dMav74J',
     },
+    {
+       name: '1f6MD3nrdobNUrE3tr3dbI2QdkdoG8TfpRFC9nOuV8s=',
+       variant: 'ydhdu5WhiJ4OASry6PY9k1sSSurI5v9ZC2rL8vzCGJ0=',
+       fen: 'jn3ejEkxlg5eljNtMSVzIf8922C6j/nXKul9y/XCqCl7gZotDisgK7mvwX0PXD6c0KI9202O7/pj5cfZEchZlypvYeECg4JgVRzqkw7QIx4=',
+       mainline: 'HkNNcjnmjis5XzW5SFmMECARUef4xPgIKaay5ZvWIMc=',
+    },
 ];
