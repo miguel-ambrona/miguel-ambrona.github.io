@@ -7,7 +7,7 @@ function rotation(element, deg, dir) {
 
     if (deg < 360 && deg > -360){
         moving = true;
-        setTimeout(function() { rotation(element, deg-5*dir, dir); }, 5);
+        setTimeout(function() { rotation(element, deg+5*dir, dir); }, 5);
     } else {
         moving = false;
     }

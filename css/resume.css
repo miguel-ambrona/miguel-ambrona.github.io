@@ -8,7 +8,7 @@ body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 20px;
   padding-left: 10px;
-  color: #757c83; /* #868e96; */
+  color: #222; /* #868e96; */
 }
 
 @media (min-width: 992px) {
@@ -94,7 +94,7 @@ p.lead {
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: center;
+    text-align: right;
     position: fixed;
     top: 0;
     left: 0;
@@ -175,22 +175,22 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #94C9E8 !important;
+  background-color: #8fa1a0 !important;
 }
 
 .text-primary {
-  color: #6B9FE5 !important;
+  color: #287cdc !important;
 }
 
 a {
-    color: #59a0f2;
+    color: #287cdc;
 }
 
 a:hover, a:focus, a:active {
-  color: #0077FF;
+  color: #c8367f;
                   }
 .a-icon {
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .a-icon:hover {

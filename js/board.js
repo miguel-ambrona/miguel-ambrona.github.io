@@ -326,6 +326,11 @@ var puzzles = [
     { fen: '8/8/8/1P3r2/BpPk4/1p1b4/P5PP/R3K3 b Q c3 0 2',
       solution: 'd4e3 a1d1 f5f1 undo undo e1c1 undo undo - b4c3 solved',
       goal : 'It is Black to move. Can they checkmate in 2 moves?',
+    },
+
+    { fen: '1N6/p5KP/P2p4/2pPk1p1/2P1p1P1/b3P1P1/2P5/8 w - - 0 1',
+      solution: 'h7h8b solved',
+      goal : 'You have touched the pawn on h7 and must move it. You only have time on the clock to make one move before you run out of time. What is the best move?',
     }
 ];
 
