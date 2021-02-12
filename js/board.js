@@ -330,7 +330,7 @@ var puzzles = [
 
     { fen: '1N6/p5KP/P2p4/2pPk1p1/2P1p1P1/b3P1P1/2P5/8 w - - 0 1',
       solution: 'h7h8b solved',
-      goal : 'You have touched the pawn on h7 and must move it. You only have time on the clock to make one move before you run out of time. What is the best move?',
+      goal : 'You have touched the pawn on h7 and must move it. You can only make one move before you run out of time. What is the best move?',
     }
 ];
 
