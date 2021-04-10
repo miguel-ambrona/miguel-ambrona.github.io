@@ -133,7 +133,7 @@ bomb_title = 'Bombazos';
 bomb_msg   = ['Este botón te permite iterar por posiciones en las que hay un truco táctico o una jugada sorprendente (para tu bando).',
               'Es recomendable estudiar estas posiciones con algo más de frecuencia para no dejar escapar oportunidades en tus partidas.'];
 
-errs_title = 'Corrije tus errores';
+errs_title = 'Corrige tus errores';
 errs_msg   = ['Haz <i>click</i> en este botón cuando muestre el símbolo <span class="fa fa-warning"></span> para resolver de nuevo posiciones en las que te has equivocado previamente.',
               'Cuando resuelvas correctamente todas las posiciones con errores, el botón volverá al estado <span class="fa fa-check-circle"></span>.'];
 
