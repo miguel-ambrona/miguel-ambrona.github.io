@@ -72,3 +72,8 @@
 }
 
 .puzzle-btns { width: 100% }
+
+.white {
+    color: #eee;
+    font-weight: bold;
+}

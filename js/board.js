@@ -213,7 +213,11 @@ function puzzleInteraction(move) {
         if (solution[variantIdx+1] === 'solved'){ finishPuzzle(); return; }
     }
 
-    setTimeout(function(){
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    setTimeout(async function(){
         if (m === suggested){
             if (variantIdx >= solution.length){ finishPuzzle(); return; }
             variantIdx++;
@@ -223,13 +227,35 @@ function puzzleInteraction(move) {
 
             if (ans === 'undo'){ undo_until_move(); return; }
 
+            if (ans === 'custom') {
+                variantIdx++;
+                let fen = solution[variantIdx].replaceAll('_', ' ');
+                variantIdx++;
+                board.position(fen);
+                while (solution[variantIdx] == 'custom') {
+                    await sleep(700);
+                    variantIdx++;
+                    let fen = solution[variantIdx].replaceAll('_', ' ');
+                    variantIdx++;
+                    board.position(fen);
+                }
+                if (solution[variantIdx] == 'set') {
+                    variantIdx++;
+                    let fen = solution[variantIdx].replaceAll('_', ' ');
+                    variantIdx++;
+                    console.log(fen);
+                    game.load(fen);
+                }
+                return;
+            }
+
             automatic_move({ from: ans.substr(0,2), to: ans.substr(2,2), promotion: ans.substr(4,1) });
             board.position(game.fen());
             variantIdx++;
             if (variantIdx >= solution.length){
                 setTimeout(function(){ finishPuzzle(); }, 700);
             }
-            if (solution[variantIdx] === 'undo'){  console.log('hola'); undo_until_move(); return; }
+            if (solution[variantIdx] === 'undo'){  undo_until_move(); return; }
 
         } else {
             game.undo();
@@ -250,9 +276,13 @@ function onSnapEnd () {
 }
 
 function loadPuzzle(i) {
+    let puzzles = fav_puzzles;
+    if (is_mine) {
+        puzzles = my_puzzles;
+    }
     if (i >= puzzles.length) { i = 0 };
-    $('#pz' + lastLoaded).removeClass('btn-primary').addClass('btn-secondary');
-    $('#pz' + i).removeClass('btn-secondary').addClass('btn-primary');
+    $('#pz' + lastLoaded).removeClass('btn-success').addClass('btn-secondary');
+    $('#pz' + i).removeClass('btn-secondary').addClass('btn-success');
 
     variantIdx = 0;
     lastLoaded = i;
@@ -267,34 +297,34 @@ function loadPuzzle(i) {
 }
 
 function buildBoard(is_draggable, fen){
-  var config = {
-    draggable: is_draggable,
-    position: '8/8/8/8/8/8/8/8 w - - 0 1',
-    onDragStart: onDragStart,
-    onDrop: onDrop,
-    onSnapEnd: onSnapEnd,
-    appearSpeed: 'fast',
-    onMouseClickSquare: onClick,
-    pieceTheme: piecesPath + '{piece}.png'
-  };
-  game.load(fen);
-  board = Chessboard('myBoard', config);
-  if (game.turn() === 'b'){ board.orientation('black'); }
-  else { board.orientation('white'); }
-  board.position(fen, false);
+    var config = {
+        draggable: is_draggable,
+        position: '8/8/8/8/8/8/8/8 w - - 0 1',
+        onDragStart: onDragStart,
+        onDrop: onDrop,
+        onSnapEnd: onSnapEnd,
+        appearSpeed: 'fast',
+        onMouseClickSquare: onClick,
+        pieceTheme: piecesPath + '{piece}.png'
+    };
+    game.load(fen);
+    board = Chessboard('myBoard', config);
+    if (game.turn() === 'b'){ board.orientation('black'); }
+    else { board.orientation('white'); }
+    board.position(fen, false);
 }
 
-var puzzles = [
+var fav_puzzles = [
     // Paul Heüacker, <i>Neue Freie Presse</i> (1920)
     { fen: '1B6/8/7P/4p3/3b3k/8/8/2K5 w - - 0 1',
       solution: 'b8a7 d4a1 c1b1 a1c3 b1c2 c3a1 a7d4 e5d4 c2d3 undo undo a1d4 c2d3 h4g5 h6h7 d4a1 d3e4 undo undo g5g6 h7h8q e5e4 d3d4 solved',
       goal : 'White to move'
     },
 
-    // Leonid Kubbel, <i>Shakhmatny Listok</i> (1922)
-    { fen: '8/N7/K6B/3k4/3p4/p7/2PP4/8 w - - 0 1',
-      solution: 'a7c6 a3a2 c6b4 undo undo d5c6 h6g7 c6c5 g7f8 undo undo c6d5 d2d3 a3a2 c2c4 d4c3 g7c3 undo undo d5c5 a6b7 a2a1q g7f8 undo undo c5b4 g7d4 solved',
-      goal : 'White to move',
+    // A. & K. Sarychev Brothers (1928)
+    { fen: '8/1pPK3b/8/8/8/5k2/8/8 w - - 0 1',
+      solution: 'd7c8 b7b5 c8d7 b5b4 d7d6 h7f5 d6e5 f5c8 e5d4 b4b3 d4c3 c8e6 c7c8q e6c8 c3b3 solved',
+      goal : 'White to move'
     },
 
     // J. Gunts, <i>Das Illustrierte Blatt</i> (1922)
@@ -303,9 +333,10 @@ var puzzles = [
       goal : 'White to move',
     },
 
-    { fen: '8/1pPK3b/8/8/8/5k2/8/8 w - - 0 1',
-      solution: 'd7c8 b7b5 c8d7 b5b4 d7d6 h7f5 d6e5 f5c8 e5d4 b4b3 d4c3 c8e6 c7c8q e6c8 c3b3 solved',
-      goal : 'White to move'
+    // Leonid Kubbel, <i>Shakhmatny Listok</i> (1922)
+    { fen: '8/N7/K6B/3k4/3p4/p7/2PP4/8 w - - 0 1',
+      solution: 'a7c6 a3a2 c6b4 undo undo d5c6 h6g7 c6c5 g7f8 undo undo c6d5 d2d3 a3a2 c2c4 d4c3 g7c3 undo undo d5c5 a6b7 a2a1q g7f8 undo undo c5b4 g7d4 solved',
+      goal : 'White to move',
     },
 
     { fen: '2N5/p7/q1p2p2/kp6/3P4/PP2K3/5P2/2B5 w - - 0 1',
@@ -316,10 +347,28 @@ var puzzles = [
     { fen: '1kb5/1pNp4/1B1Pp3/P1p1p3/2p1P3/2PP4/3P1PKP/Q3R3 w - - 0 1',
       solution: 'e1h1 c4d3 a1g1 c5c4 f2f4 e5f4 b6a7 solved',
       goal : 'White to mate in 4',
+    }
+];
+
+var my_puzzles = [
+    { fen: '8/4k3/2Q5/8/3K4/7p/7P/8 w - - 0 1',
+      // solution : 'd4e5 custom 8/4k3/2Q5/8/3K4/7p/7P/8 custom 3k1k2/5k2/2Q5/8/3K4/7p/7P/8 custom 3k1k2/5k2/2Q5/4K3/8/7p/7P/8 custom 5kk1/4kkk1/2Q5/4K3/8/7p/7P/8 set 5k2/8/2Q5/4K3/8/7p/7P/8_w_-_-_0_1 c6d6 custom 4k1kk/5kkk/3Q4/4K3/8/7p/7P/8 set 6k1/8/3Q4/4K3/8/7p/7P/8_w_-_-_0_1 e5f5 f d6c7 f f5f6 f c7c8 f c8d7 f d7g7 f g7g5 solved',
+      solution : '',
+      goal: 'Black to move. White premoves to mate in a linear sequence of 9 moves'
     },
 
-    { fen: '5r2/8/1R6/ppk3p1/2N3P1/P4b2/1K6/5B2 w - - 0 1',
-      solution: 'b6b5 c5b5 c4e5 b5b6 e5d7 undo undo b5a4 e5d7 f8c8 d7b6 undo undo f3e2 f1e2 f8b8 e2b5 b8b5 b2a2 solved',
+    { fen: '6k1/p3p1P1/2p3PB/p5P1/8/4P3/PKP5/8 w - - 0 1',
+      solution : '',
+      goal: 'White ran out of time. Result?'
+    },
+
+    { fen: '1N6/p5KP/P2p4/2pPk1p1/2P1p1P1/b3P1P1/2P5/8 w - - 0 1',
+      solution: 'h7h8b solved',
+      goal : 'You have touched the pawn on h7 and must move it. You can only make one move before you run out of time. What is the best move?',
+    },
+
+    { fen: '8/8/8/8/1p6/p6B/k1K4N/8 w - - 0 1',
+      solution: 'h3e6 b4b3 e6b3 a2a1 b3a2 a1a2 h2f3 a2a1 f3d4 a1a2 d4e2 a2a1 e2c1 a3a2 c1b3 solved',
       goal : 'White to move',
     },
 
@@ -328,12 +377,7 @@ var puzzles = [
       goal : 'It is Black to move. Can they checkmate in 2 moves?',
     },
 
-    { fen: '1N6/p5KP/P2p4/2pPk1p1/2P1p1P1/b3P1P1/2P5/8 w - - 0 1',
-      solution: 'h7h8b solved',
-      goal : 'You have touched the pawn on h7 and must move it. You can only make one move before you run out of time. What is the best move?',
-    }
 ];
 
 buildBoard(true, '8/8/8/8/8/8/8/8 w - - 0 1');
-
-loadPuzzle(0);
+let is_mine = false;

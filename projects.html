@@ -88,78 +88,107 @@
 
   </nav>
 
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex" id="about">
+  <section class="resume-section p-3 p-lg-5 d-flex justified-items-center" id="tools">
       <div class="w-100">
-        <span class="d-block d-lg-none white" style="max-width: 300px; margin: auto">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-5" src="img/profile.jpg" alt="">
-        </span>
-        <h2 class="mb-5">Miguel Ambrona</h2>
-        <p class="lead mb-3">
-          I am a Senior Cryptography Engineer at <a href="https://iohk.io/">Input Output Global (IOHK)</a>.
-        </p>
-        <p class="lead mb-3">
-          Previously, I was a Research Scientist at <a href="https://www.nomadic-labs.com/">Nomadic Labs</a>, working
-          on the design and implementation of PlonK-based SNARKs.
-        </p>
-        <p class="lead mb-3">
-          Before that, I worked as a postdoctoral researcher
-          at <a href="https://www.ntt.co.jp/sc/index_e.html">NTT Secure Platform Laboratories</a> (Tokyo),
-          in the area of Cryptography,
-          under the supervision of <a href="http://www005.upp.so-net.ne.jp/nanacov/">Masayuki Abe</a>.
-        </p>
-        <p class="lead mb-3">
-          I obtained my PhD in Cryptography at the
-          <a href="https://software.imdea.org/">IMDEA Software Institute</a> and
-          <a href="http://www.fi.upm.es">Universidad Politécnica de Madrid</a>, under the supervision of
-          <a href="https://gbarthe.github.io/">Gilles Barthe</a> and
-          <a href="https://beschmi.net/">Benedikt Schmidt</a>.
-          After my PhD, and prior to joining NTT, I stayed at
-          <a href="https://software.imdea.org/">IMDEA</a> as a postdoctoral researcher, supervised by
-          <a href="http://www.dariofiore.it/">Dario Fiore</a> and
-          <a href="https://es.linkedin.com/in/claudiosoriente">Claudio Soriente</a>.
-        </p>
-        <p class="lead mb-5">
-          My Bachelor and Master degrees were on Mathematical Engineering at
-          <a href="https://www.ucm.es/">Universidad Complutense de Madrid</a>.
-        </p>
+        <h2 class="mb-5">Projects</h2>
+
+        <div class="my-paragraph my-tool">
+          These are some of the software projects I have contributed to during
+          my career in Cryptography.
+        </div>
+        <br>
+        <br>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3>Research Interests</h3>
-            <div class="columns-3 my-paragraph">
-              <ul>
-                <li>SNARKs and zero-knowledge proofs</li>
-                <li>Blockchain technology</li>
-                <li>Computer-aided cryptography</li>
-                <li>Idealized models (GGM)</li>
-                <li>Predicate encryption</li>
-                <li>Functional programming</li>
-              </ul>
+            <h3>aPlonK</h3>
+            <div class="my-paragraph my-tool">
+              An OCaml implementation of the
+              <a href="https://eprint.iacr.org/2019/953.pdf">PlonK proving system</a>,
+              enhanced with techniques for proof aggregation.
+              Developed by the
+              <a href="https://research-development.nomadic-labs.com/files/cryptography.html">Cryptography Team</a> at
+              <a href="https://www.nomadic-labs.com/">Nomadic Labs</a>.
+              See our <a href="https://eprint.iacr.org/2022/1352">research paper</a>.
             </div>
           </div>
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3>Contact</h3>
-
-            <div class="subheading mb-5 columns">
-              <span><i class="fa fa-envelope"></i><span style="margin-left: 10px">name.surname@iohk.io</span></span><br>
+            <h3>AutoDiff</h3>
+            <div class="my-paragraph my-tool">
+              A <a href="https://github.com/miguel-ambrona/autodiff">tool</a>
+              for fully automated synthesis of indifferentiability attacks, developed as
+              part of this <a href="https://dl.acm.org/doi/10.1145/3488932.3497759">research project</a>.
             </div>
-            <div class="subheading mb-5">
-              PGP Public Key:
-              <a href="https://keys.mailvelope.com/pks/lookup?op=get&search=0xEC60205C4F332465">
-                keys.mailvelope.com/pks/lookup?op=get&search=0xEC60205C4F332465
-              </a>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>ZK Contingent Payment</h3>
+            <div class="my-paragraph my-tool">
+              A <a href="https://github.com/security-kouza/cont-pay">prototype implementation</a>
+              of a contingent payments protocol,
+              which leverages a cryptocurrency system to realize
+              secure fair-exchange of information.
+              See <a href="https://dl.acm.org/doi/10.1145/3372297.3417888">our paper</a>.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>MA-CFE for Quadratic Functions</h3>
+            <div class="my-paragraph my-tool">
+              A prototype implementation of our constructions of
+              multi-authority controlled-functional encryption for quadratic functions from
+              <a href="https://content.sciendo.com/view/journals/popets/2021/1/article-p21.xml?language=en">this paper</a>.
+              Unfortunately, the implementation is not open-source.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>ABE-Relic</h3>
+            <div class="my-paragraph my-tool">
+              A proof-of-concept
+              <a href="https://github.com/miguel-ambrona/abe-relic">implementation</a>
+              of attribute-based encryption in the framework of <i>predicate encodings</i> and
+              <i>pair encodings</i>.
+              See <a href="https://eprint.iacr.org/2016/1105">our paper</a>.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>GGM Symbolic Solver</h3>
+            <div class="my-paragraph my-tool">
+              The
+              <a href="https://github.com/miguel-ambrona/ggm-symbolic-solver">Generic Group Model Symbolic Solver</a>
+              is an extension of the
+              <a href="http://generic-group-analyzer.github.io/gga-ub">Generic Group Analyzer Unbounded</a>
+              that handles polynomial divisions in the exponent.
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3>GGA Ubounded</h3>
+            <div class="my-paragraph my-tool">
+              The <a href="http://generic-group-analyzer.github.io/gga-ub">Generic Group Analyzer Unbounded</a>
+              is a tool for automated analysis of cryptographic constructions and assumptions
+              in the generic group model.
             </div>
           </div>
         </div>
 
       </div>
     </section>
-
   </div>
 
 
@@ -175,6 +204,7 @@
 
   <!-- My scripts JavaScript -->
   <script src="js/scripts.js"></script>
+  <script src="js/board.js"></script>
 
 </body>
 

@@ -18,6 +18,10 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <script src="https://use.fontawesome.com/6d26681b38.js"></script>
 
+  <!-- Styles for chess -->
+  <link type="text/css" rel="stylesheet" href="vendor/chess/chessboard-1.0.0.min.css"/>
+  <link type="text/css" rel="stylesheet" href="css/board.css"/>
+
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -90,74 +94,81 @@
 
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex" id="about">
+    <section class="resume-section p-3 p-lg-5 d-flex justify-items-center" id="chess">
       <div class="w-100">
-        <span class="d-block d-lg-none white" style="max-width: 300px; margin: auto">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-5" src="img/profile.jpg" alt="">
-        </span>
-        <h2 class="mb-5">Miguel Ambrona</h2>
-        <p class="lead mb-3">
-          I am a Senior Cryptography Engineer at <a href="https://iohk.io/">Input Output Global (IOHK)</a>.
+        <h2 class="mb-5">Chess</h2>
+        <p class="my-paragraph">
+          I love chess, studying, playing, watching and composing.
         </p>
-        <p class="lead mb-3">
-          Previously, I was a Research Scientist at <a href="https://www.nomadic-labs.com/">Nomadic Labs</a>, working
-          on the design and implementation of PlonK-based SNARKs.
-        </p>
-        <p class="lead mb-3">
-          Before that, I worked as a postdoctoral researcher
-          at <a href="https://www.ntt.co.jp/sc/index_e.html">NTT Secure Platform Laboratories</a> (Tokyo),
-          in the area of Cryptography,
-          under the supervision of <a href="http://www005.upp.so-net.ne.jp/nanacov/">Masayuki Abe</a>.
-        </p>
-        <p class="lead mb-3">
-          I obtained my PhD in Cryptography at the
-          <a href="https://software.imdea.org/">IMDEA Software Institute</a> and
-          <a href="http://www.fi.upm.es">Universidad Politécnica de Madrid</a>, under the supervision of
-          <a href="https://gbarthe.github.io/">Gilles Barthe</a> and
-          <a href="https://beschmi.net/">Benedikt Schmidt</a>.
-          After my PhD, and prior to joining NTT, I stayed at
-          <a href="https://software.imdea.org/">IMDEA</a> as a postdoctoral researcher, supervised by
-          <a href="http://www.dariofiore.it/">Dario Fiore</a> and
-          <a href="https://es.linkedin.com/in/claudiosoriente">Claudio Soriente</a>.
-        </p>
-        <p class="lead mb-5">
-          My Bachelor and Master degrees were on Mathematical Engineering at
-          <a href="https://www.ucm.es/">Universidad Complutense de Madrid</a>.
+        <p class="my-paragraph mb-5">
+          I have leveraged chess to improve my programming skills over the years.
+          One of my most remarkable projets is the following tool, designed to
+          apply the FIDE rules of chess rigorously.
         </p>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3>Research Interests</h3>
-            <div class="columns-3 my-paragraph">
-              <ul>
-                <li>SNARKs and zero-knowledge proofs</li>
-                <li>Blockchain technology</li>
-                <li>Computer-aided cryptography</li>
-                <li>Idealized models (GGM)</li>
-                <li>Predicate encryption</li>
-                <li>Functional programming</li>
-              </ul>
-            </div>
-          </div>
+        <h3 class="mb-3">Chess Unwinnability Analyzer</h3>
+        <div class="my-paragraph my-tool mb-5">
+          I am the main developer of the
+          <a href="https://chasolver.org">Chess Unwinnability Analyzer</a>,
+          a <b><span class="text-success">free</span></b> and
+          <b><span class="text-success">open-source</span></b>
+          implementation of a decision procedure for checking whether there exists a sequence of legal
+          moves that allows a certain player to checkmate their opponent in a given chess position.
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3>Contact</h3>
+        <h3 class="mb-3">Chess Compositions</h3>
 
-            <div class="subheading mb-5 columns">
-              <span><i class="fa fa-envelope"></i><span style="margin-left: 10px">name.surname@iohk.io</span></span><br>
+        <p class="my-paragraph">
+          Below you can find some of my favourite chess compositions (the board is interactive).
+        </p>
+        <p class="mb-5 my-paragraph">
+          I am also a composer. You can find some of my own compositions
+          <a href="mycompositions.html">here</a>.
+        </p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-xl-7">
+              <div id="myBoard" class="board mb-3"></div>
+              <h3 id="puzzlegoal" class="goal"></h3>
             </div>
-            <div class="subheading mb-5">
-              PGP Public Key:
-              <a href="https://keys.mailvelope.com/pks/lookup?op=get&search=0xEC60205C4F332465">
-                keys.mailvelope.com/pks/lookup?op=get&search=0xEC60205C4F332465
-              </a>
+            <div class="col-sm-12 col-xl-5">
+              <div class="btn-group-vertical puzzle-btns" role="group" aria-label="First group">
+                <button id="pz0" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(0)">
+                  Paul Heüacker, <i>Neue Freie Presse</i> (1920)
+                </button>
+                <button id="pz1" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(1)">
+                  A. & K. Sarychev Brothers (1928)
+                </button>
+                <button id="pz2" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(2)">
+                  J. Gunts, <i>Das Illustrierte Blatt</i> (1922)
+                </button>
+                <button id="pz3" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(3)">
+                  Leonid Kubbel, <i>Shakhmatny Listok</i> (1922)
+                </button>
+                <button id="pz4" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(4)">
+                  Mark Liburkin, <i>Shakhmaty V SSSR</i> (1939)
+                </button>
+                <button id="pz5" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(5)">
+                   Fritz Emil Giegold, <i>Schach-Echo</i> (1958)
+                </button>
+                <!-- <button id="pz6" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(6)"> -->
+                <!--   Yochanan Afek, <i>Tidskrift för Schack</i> (1972) -->
+                <!-- </button> -->
+                <!-- <button id="pz7" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(7)"> -->
+                <!--    Miguel Ambrona, <i>Revista Peón de Rey</i> (2015) -->
+                <!-- </button> -->
+                <!-- <button id="pz8" type="button" class="btn btn-secondary mybtn-group" onclick="loadPuzzle(8)"> -->
+                <!--    Miguel Ambrona, <i>Revista Peón de Rey</i> (2020) -->
+                <!-- </button> -->
+
+              </div>
             </div>
           </div>
         </div>
 
       </div>
+
     </section>
 
   </div>
@@ -173,8 +184,19 @@
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
 
+  <!-- Chess scripts -->
+  <script type="text/javascript" src="vendor/chess/chessboard-1.0.0.js"></script>
+  <script type="text/javascript" src="vendor/chess/chess.js"></script>
+
   <!-- My scripts JavaScript -->
   <script src="js/scripts.js"></script>
+  <script src="js/board.js"></script>
+
+  <script>
+    setTimeout(function() {
+        loadPuzzle(0);
+    }, 50);
+  </script>
 
 </body>
 
